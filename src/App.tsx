@@ -17,6 +17,9 @@ const Top = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Top page</p>
+        <Link to="/login" style={{ color: "white" }}>
+          Loginページ
+        </Link>
         <Link to="/thanks" style={{ color: "white" }}>
           購入ボタン
         </Link>
@@ -98,9 +101,21 @@ const ThanksPage = () => {
   );
 };
 
+const LoginPage = () => {
+  return (
+    <div className="App">
+      <header className="App-header"></header>
+      <Link to="/" style={{ color: "white" }}>
+        Loginボタン
+      </Link>
+    </div>
+  );
+};
+
 export const router = createBrowserRouter([
   { path: "/", element: <Top /> },
   { path: "thanks", element: <ThanksPage /> },
+  { path: "login", element: <LoginPage /> },
 ]);
 
 function App() {
