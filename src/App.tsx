@@ -17,10 +17,10 @@ const Top = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Top page</p>
-        <Link to="/login" style={{ color: "white" }}>
+        <Link to="/ga4-test/login" style={{ color: "white" }}>
           Loginページ
         </Link>
-        <Link to="/thanks" style={{ color: "white" }}>
+        <Link to="/ga4-test/thanks" style={{ color: "white" }}>
           購入ボタン
         </Link>
       </header>
@@ -105,7 +105,7 @@ const LoginPage = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to="/" style={{ color: "white" }}>
+        <Link to="/ga4-test/" style={{ color: "white" }}>
           Loginボタン
         </Link>
       </header>
@@ -114,9 +114,9 @@ const LoginPage = () => {
 };
 
 export const router = createBrowserRouter([
-  { path: "/", element: <Top /> },
-  { path: "thanks", element: <ThanksPage /> },
-  { path: "login", element: <LoginPage /> },
+  { path: "/ga4-test/", element: <Top /> },
+  { path: "/ga4-test/thanks", element: <ThanksPage /> },
+  { path: "/ga4-test/login", element: <LoginPage /> },
 ]);
 
 function App() {
