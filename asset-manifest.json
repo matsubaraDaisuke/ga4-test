@@ -1,7 +1,7 @@
 {
   "main.css": "/ga4-test/static/css/main.5412dd83.chunk.css",
-  "main.js": "/ga4-test/static/js/main.90c970b6.chunk.js",
-  "main.js.map": "/ga4-test/static/js/main.90c970b6.chunk.js.map",
+  "main.js": "/ga4-test/static/js/main.c5250d0a.chunk.js",
+  "main.js.map": "/ga4-test/static/js/main.c5250d0a.chunk.js.map",
   "static/js/1.dcb7df9b.chunk.js": "/ga4-test/static/js/1.dcb7df9b.chunk.js",
   "static/js/1.dcb7df9b.chunk.js.map": "/ga4-test/static/js/1.dcb7df9b.chunk.js.map",
   "static/js/2.695e52e3.chunk.js": "/ga4-test/static/js/2.695e52e3.chunk.js",
@@ -11,6 +11,6 @@
   "static/media/logo.svg": "/ga4-test/static/media/logo.06e73328.svg",
   "static/css/main.5412dd83.chunk.css.map": "/ga4-test/static/css/main.5412dd83.chunk.css.map",
   "index.html": "/ga4-test/index.html",
-  "precache-manifest.3b0f0c64d3a35db4eb3f428cae26bc32.js": "/ga4-test/precache-manifest.3b0f0c64d3a35db4eb3f428cae26bc32.js",
+  "precache-manifest.62eac560abf3a66fefbe507454f9e5a0.js": "/ga4-test/precache-manifest.62eac560abf3a66fefbe507454f9e5a0.js",
   "service-worker.js": "/ga4-test/service-worker.js"
 }
