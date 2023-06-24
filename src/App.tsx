@@ -104,10 +104,11 @@ const ThanksPage = () => {
 const LoginPage = () => {
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <Link to="/" style={{ color: "white" }}>
-        Loginボタン
-      </Link>
+      <header className="App-header">
+        <Link to="/" style={{ color: "white" }}>
+          Loginボタン
+        </Link>
+      </header>
     </div>
   );
 };
