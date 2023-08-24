@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("358058956");
+ReactGA.send("pageview");
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
