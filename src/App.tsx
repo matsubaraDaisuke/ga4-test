@@ -23,17 +23,11 @@ const Top = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Top page</p>
-<<<<<<< HEAD
-        <Link
-          to={`${process.env.PUBLIC_URL || ""}/thanks`}
-          style={{ color: "white" }}
-        >
-=======
+
         <Link to="/ga4-test/login" style={{ color: "white" }}>
           Loginページ
         </Link>
         <Link to="/ga4-test/thanks" style={{ color: "white" }}>
->>>>>>> 0d2a2b9822cd7fe7be477f8ba9c921d62927a587
           購入ボタン
         </Link>
       </header>
@@ -136,17 +130,9 @@ const LoginPage = () => {
 };
 
 export const router = createBrowserRouter([
-<<<<<<< HEAD
-  { path: `/${process.env.PUBLIC_URL || ""}/`, element: <Top /> },
-  {
-    path: `/${process.env.PUBLIC_URL || ""}/thanks`,
-    element: <ThanksPage />,
-  },
-=======
   { path: "/ga4-test/", element: <Top /> },
   { path: "/ga4-test/thanks", element: <ThanksPage /> },
   { path: "/ga4-test/login", element: <LoginPage /> },
->>>>>>> 0d2a2b9822cd7fe7be477f8ba9c921d62927a587
 ]);
 
 function App() {
