@@ -53,6 +53,14 @@
       gtag("config", "G-R2Y2YXWD41");
       // gtag("config", "UA-*********-*");
     </script>
+    <script>
+      // GTMのタグが準備される前は`window.dataLayer`が存在しないため、一度空の配列を代入しておく。(pushもArray prototypeのpushを使う)
+      // GTMのタグが準備された後は、GTMに送信する「dataLayerが持っているpushメソッド」が使えるようになる
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        key: value,
+      });
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

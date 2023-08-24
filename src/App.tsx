@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import sha256 from "crypto-js/sha256";
+
+declare global {
+  interface Window {
+    dataLayer: object[];
+  }
+}
 
 const encryptSha256 = (str: string | null | undefined): string | null => {
   if (!str) return null;
@@ -17,7 +23,10 @@ const Top = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Top page</p>
-        <Link to="/thanks" style={{ color: "white" }}>
+        <Link
+          to={`${process.env.PUBLIC_URL || ""}/thanks`}
+          style={{ color: "white" }}
+        >
           購入ボタン
         </Link>
       </header>
@@ -41,9 +50,18 @@ const ThanksPage = () => {
     ph: encryptSha256(user.telNumber) || "",
     ge: encryptSha256(user.sex === "male" ? "m" : "f") || "",
     db: encryptSha256(user.birthday) || "",
-    ln: encryptSha256(user.givenName) || "",
+    ln: encryptSha256(user.givenName) || "", //givenName == firstName
     fn: encryptSha256(user.familyName) || "",
   };
+
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "test",
+      fb_capi_ip: value.ip,
+      fb_capi_em: value.em,
+    });
+  }, []);
 
   return (
     <div className="App">
@@ -99,8 +117,11 @@ const ThanksPage = () => {
 };
 
 export const router = createBrowserRouter([
-  { path: "/", element: <Top /> },
-  { path: "thanks", element: <ThanksPage /> },
+  { path: `/${process.env.PUBLIC_URL || ""}/`, element: <Top /> },
+  {
+    path: `/${process.env.PUBLIC_URL || ""}/thanks`,
+    element: <ThanksPage />,
+  },
 ]);
 
 function App() {
